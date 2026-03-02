@@ -18,7 +18,7 @@ const pool = new Pool({
 // GET all todos
 app.get("/todos", async (req, res) => {
     try {
-        const result = await pool.query("SELECT * FROM todo ORDER BY id ASC")
+        const result = await pool.query("SELECT * FROM todo ORDER BY id ASC");
         res.json(result.rows);
     } catch (error) {
         console.error("Error fetching todos:", error);
